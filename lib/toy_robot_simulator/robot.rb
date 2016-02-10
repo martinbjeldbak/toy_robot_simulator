@@ -12,7 +12,7 @@ class Robot
 
   private
 
-  def position_out_of_bounds?(x, y, upper_limit = 4, lower_limit = 0)
+  def position_out_of_bounds?(x, y, lower_limit = 0, upper_limit = 4)
     (x < lower_limit or y < lower_limit) or (x > upper_limit or y > upper_limit)
   end
 

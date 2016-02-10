@@ -31,8 +31,4 @@ describe ToyRobotSimulator do
       end
     end
   end
-
-
-
-
 end
