@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8438161-0756-4872-9c0a-48cdda93f576" name="Default" comment="Initial commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/toy_robot_simulator/robot.rb" afterPath="$PROJECT_DIR$/lib/toy_robot_simulator/robot.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/toy_robot_simulator_spec.rb" afterPath="$PROJECT_DIR$/spec/toy_robot_simulator_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/toy_robot_simulator/direction.rb" afterPath="$PROJECT_DIR$/lib/toy_robot_simulator/direction.rb" />
     </list>
     <ignored path="toy_robot_simulator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,10 +21,14 @@
     <SUITE FILE_PATH="coverage/toy_robot_simulator@Obeying_situations_when_in_situation_1__toy_robot_simulator.coverage" NAME="Obeying situations when in situation 1: toy_robot_simulator Coverage Results" MODIFIED="1456084718121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
     <SUITE FILE_PATH="coverage/toy_robot_simulator@Obeying_situations_situation_1__toy_robot_simulator.coverage" NAME="Obeying situations situation 1: toy_robot_simulator Coverage Results" MODIFIED="1456076420067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
     <SUITE FILE_PATH="coverage/toy_robot_simulator@ToyRobotSimulator_when_placing_robot_in_valid_configurations_it_creates_new_instances__toy_robot_simulator.coverage" NAME="ToyRobotSimulator when placing robot in valid configurations it creates new instances: toy_robot_simulator Coverage Results" MODIFIED="1456084721735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
+    <SUITE FILE_PATH="coverage/toy_robot_simulator@Obeying_situations__toy_robot_simulator.coverage" NAME="Obeying situations: toy_robot_simulator Coverage Results" MODIFIED="1456085845160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
+    <SUITE FILE_PATH="coverage/toy_robot_simulator@ToyRobotSimulator__Robot__toy_robot_simulator.coverage" NAME="ToyRobotSimulator::Robot: toy_robot_simulator Coverage Results" MODIFIED="1456087663431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
     <SUITE FILE_PATH="coverage/toy_robot_simulator@spec__toy_robot_simulator.coverage" NAME="spec: toy_robot_simulator Coverage Results" MODIFIED="1455119505568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
     <SUITE FILE_PATH="coverage/toy_robot_simulator@Obeying_situations_situation_1_gives_the_right_output__toy_robot_simulator.coverage" NAME="Obeying situations situation 1 gives the right output: toy_robot_simulator Coverage Results" MODIFIED="1456083584226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
     <SUITE FILE_PATH="coverage/toy_robot_simulator@ToyRobotSimulator__toy_robot_simulator.coverage" NAME="ToyRobotSimulator: toy_robot_simulator Coverage Results" MODIFIED="1456085128593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
+    <SUITE FILE_PATH="coverage/toy_robot_simulator@Robot__toy_robot_simulator.coverage" NAME="Robot: toy_robot_simulator Coverage Results" MODIFIED="1456086859256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
     <SUITE FILE_PATH="coverage/toy_robot_simulator@ToyRobotSimulator_can_be_placed__toy_robot_simulator.coverage" NAME="ToyRobotSimulator can be placed: toy_robot_simulator Coverage Results" MODIFIED="1455119898614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
+    <SUITE FILE_PATH="coverage/toy_robot_simulator@Direction_when_placing_robot_in_valid_configurations_it_creates_new_instances__toy_robot_simulator.coverage" NAME="Direction when placing robot in valid configurations it creates new instances: toy_robot_simulator Coverage Results" MODIFIED="1456086856849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
     <SUITE FILE_PATH="coverage/toy_robot_simulator@Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1455119464289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="toy_robot_simulator" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -40,21 +42,31 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="toy_robot_simulator_spec.rb" pinned="false" current-in-tab="false">
+          <file leaf-file-name="toy_robot_simulator_spec.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/toy_robot_simulator_spec.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+                <state vertical-scroll-proportion="0.07177033">
+                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="situation_spec.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="spec_helper.rb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="situation_spec.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/spec/situation_spec.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.46650717">
-                  <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -64,21 +76,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="robot.rb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="robot.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator/robot.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.21052632">
-                  <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="direction.rb" pinned="false" current-in-tab="false">
+          <file leaf-file-name="direction.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator/direction.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+                <state vertical-scroll-proportion="0.71770334">
+                  <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
@@ -91,8 +103,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Ruby Class Template" />
         <option value="RSpec Test Template" />
+        <option value="Ruby Class Template" />
       </list>
     </option>
   </component>
@@ -103,17 +115,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/toy_robot_simulator/directions.rb" />
-        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/lib/toy_robot_simulator/errors.rb" />
-        <option value="$PROJECT_DIR$/lib/toy_robot_simulator.rb" />
         <option value="$PROJECT_DIR$/spec/situation_files/situation1.txt" />
         <option value="$PROJECT_DIR$/spec/fixtures/stiatuation1.txt" />
         <option value="$PROJECT_DIR$/spec/situation_spec.rb" />
         <option value="$PROJECT_DIR$/spec/fixtures/situation2.txt" />
         <option value="$PROJECT_DIR$/spec/fixtures/situation3.txt" />
-        <option value="$PROJECT_DIR$/lib/toy_robot_simulator/direction.rb" />
-        <option value="$PROJECT_DIR$/spec/toy_robot_simulator_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/toy_robot_simulator/util.rb" />
         <option value="$PROJECT_DIR$/lib/toy_robot_simulator/robot.rb" />
+        <option value="$PROJECT_DIR$/lib/toy_robot_simulator.rb" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/spec/toy_robot_simulator_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/toy_robot_simulator/direction.rb" />
       </list>
     </option>
   </component>
@@ -194,24 +207,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="toy_robot_simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="toy_robot_simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -254,7 +249,7 @@
       <recent name="$PROJECT_DIR$/lib/toy_robot_simulator" />
     </key>
   </component>
-  <component name="RunManager" selected="RSpec.ToyRobotSimulator: toy_robot_simulator">
+  <component name="RunManager" selected="RSpec.ToyRobotSimulator::Robot: toy_robot_simulator">
     <configuration default="false" name="ToyRobotSimulator: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="toy_robot_simulator" />
@@ -288,7 +283,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Obeying situations situation 1: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Obeying situations: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="toy_robot_simulator" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -310,7 +305,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/situation_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Obeying situations situation 1" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Obeying situations" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -321,40 +316,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Obeying situations situation 1 gives the right output: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="toy_robot_simulator" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/situation_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Obeying situations situation 1 gives the right output" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ToyRobotSimulator when placing robot in valid configurations it creates new instances: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Direction when placing robot in valid configurations it creates new instances: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="toy_robot_simulator" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -376,7 +338,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/toy_robot_simulator_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ToyRobotSimulator when placing robot in valid configurations it creates new instances" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Direction when placing robot in valid configurations it creates new instances" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -387,7 +349,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Obeying situations when in situation 1: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Robot: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="toy_robot_simulator" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -406,10 +368,43 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/situation_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/toy_robot_simulator_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Obeying situations when in situation 1" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Robot" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ToyRobotSimulator::Robot: toy_robot_simulator" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="toy_robot_simulator" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/toy_robot_simulator_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="ToyRobotSimulator::Robot" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -573,18 +568,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="RSpec.ToyRobotSimulator: toy_robot_simulator" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.Obeying situations situation 1: toy_robot_simulator" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.Obeying situations situation 1 gives the right output: toy_robot_simulator" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.ToyRobotSimulator when placing robot in valid configurations it creates new instances: toy_robot_simulator" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.Obeying situations when in situation 1: toy_robot_simulator" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.Obeying situations: toy_robot_simulator" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.Direction when placing robot in valid configurations it creates new instances: toy_robot_simulator" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.Robot: toy_robot_simulator" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.ToyRobotSimulator::Robot: toy_robot_simulator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.ToyRobotSimulator: toy_robot_simulator" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.ToyRobotSimulator when placing robot in valid configurations it creates new instances: toy_robot_simulator" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.Obeying situations when in situation 1: toy_robot_simulator" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.Obeying situations situation 1 gives the right output: toy_robot_simulator" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.Obeying situations situation 1: toy_robot_simulator" />
+        <item index="0" class="java.lang.String" itemvalue="RSpec.ToyRobotSimulator::Robot: toy_robot_simulator" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.Robot: toy_robot_simulator" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.Direction when placing robot in valid configurations it creates new instances: toy_robot_simulator" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.Obeying situations: toy_robot_simulator" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.ToyRobotSimulator: toy_robot_simulator" />
       </list>
     </recent_temporary>
   </component>
@@ -621,35 +616,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Obeying_situations_when_in_situation_1__toy_robot_simulator - 2016.02.21 at 20h 53m 45s.xml">
-      <configuration name="Obeying situations when in situation 1: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 34m 52s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Obeying_situations_when_in_situation_1__toy_robot_simulator - 2016.02.21 at 20h 53m 51s.xml">
-      <configuration name="Obeying situations when in situation 1: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 35m 05s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Obeying_situations_when_in_situation_1__toy_robot_simulator - 2016.02.21 at 20h 58m 39s.xml">
-      <configuration name="Obeying situations when in situation 1: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 36m 57s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="ToyRobotSimulator__toy_robot_simulator - 2016.02.21 at 20h 58m 49s.xml">
-      <configuration name="ToyRobotSimulator: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 37m 22s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="ToyRobotSimulator__toy_robot_simulator - 2016.02.21 at 21h 01m 30s.xml">
-      <configuration name="ToyRobotSimulator: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 39m 25s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="ToyRobotSimulator__toy_robot_simulator - 2016.02.21 at 21h 02m 42s.xml">
-      <configuration name="ToyRobotSimulator: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 43m 32s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="ToyRobotSimulator__toy_robot_simulator - 2016.02.21 at 21h 02m 53s.xml">
-      <configuration name="ToyRobotSimulator: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 43m 48s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="ToyRobotSimulator__toy_robot_simulator - 2016.02.21 at 21h 02m 56s.xml">
-      <configuration name="ToyRobotSimulator: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 44m 38s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="ToyRobotSimulator__toy_robot_simulator - 2016.02.21 at 21h 05m 30s.xml">
-      <configuration name="ToyRobotSimulator: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 44m 53s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="ToyRobotSimulator_when_placing_robot_in_valid_configurations_it_creates_new_instances__toy_robot_simulator - 2016.02.21 at 20h 58m 42s.xml">
-      <configuration name="ToyRobotSimulator when placing robot in valid configurations it creates new instances: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="ToyRobotSimulator__Robot__toy_robot_simulator - 2016.02.21 at 21h 47m 44s.xml">
+      <configuration name="ToyRobotSimulator::Robot: toy_robot_simulator" configurationId="RSpecRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -669,7 +664,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32743362" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3421829" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -744,6 +739,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.22129436">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -758,6 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -765,21 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18454936">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042918455">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28708133">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -808,34 +790,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator/direction.rb">
+    <entry file="file://$PROJECT_DIR$/spec/situation_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator/robot.rb">
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21052632">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035885166">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/toy_robot_simulator_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.07177033">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/situation_spec.rb">
+    <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator/robot.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46650717">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/toy_robot_simulator/direction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71770334">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding />
         </state>
       </provider>
