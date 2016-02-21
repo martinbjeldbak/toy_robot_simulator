@@ -2,9 +2,7 @@ class Robot
   attr_reader :location, :facing
 
   def initialize(x = 0, y = 0, facing)
-    if position_out_of_bounds?(x, y)
-      raise 'x or y coordinate out of bounds'
-    end
+      raise 'x or y coordinate out of bounds' if position_out_of_bounds? x, y
 
     @location = {x: x, y: y}
     @facing = facing
