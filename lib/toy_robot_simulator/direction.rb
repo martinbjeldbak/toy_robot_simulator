@@ -1,6 +1,8 @@
 module ToyRobotSimulator
-  NORTH = 0
-  EAST = 1
-  SOUTH = 2
-  WEST = 3
+  DIRECTIONS = [
+    NORTH = 'North',
+    EAST = 'East',
+    SOUTH = 'South',
+    WEST = 'West',
+  ]
 end
