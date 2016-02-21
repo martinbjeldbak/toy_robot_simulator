@@ -8,10 +8,9 @@ class Robot
     @facing = facing
   end
 
-  private
-
-  def position_out_of_bounds?(x, y, lower_limit = 0, upper_limit = 4)
-    (x < lower_limit or y < lower_limit) or (x > upper_limit or y > upper_limit)
+  # Formats a string used for reporting location of bot
+  def report_s
+    "#{@location[:x]},#{@location[:y]},#{@facing.upcase}"
   end
 
   def output_string
@@ -20,10 +19,22 @@ class Robot
 
   def self.from_file(path)
     File.open(path, 'r') do |f|
-      f.each_line do |line|
-        puts(line)
-      end
+      placement = f.readline
+
+      puts(placement)
+
+      #f.each_line do |line|
+      #  puts(line)
+      #end
     end
   end
+
+  private
+
+  # Is the current location out of bounds?
+  def position_out_of_bounds?(x, y, lower_limit = 0, upper_limit = 4)
+    (x < lower_limit or y < lower_limit) or (x > upper_limit or y > upper_limit)
+  end
+
 
 end

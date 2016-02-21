@@ -9,14 +9,17 @@ describe ToyRobotSimulator do
       it 'it creates new instances' do
         robot = Robot.new(0, 0, ToyRobotSimulator::NORTH)
         expect(robot.location).to eq(x: 0, y: 0)
+        expect(robot.report_s).to eq '0,0,NORTH'
         expect(robot.facing).to eq(ToyRobotSimulator::NORTH)
 
         robot = Robot.new(1, 0, ToyRobotSimulator::EAST)
         expect(robot.location).to eq(x: 1, y: 0)
+        expect(robot.report_s).to eq '1,0,EAST'
         expect(robot.facing).to eq(ToyRobotSimulator::EAST)
 
         robot = Robot.new(3, 2, ToyRobotSimulator::NORTH)
         expect(robot.location).to eq(x: 3, y: 2)
+        expect(robot.report_s).to eq '3,2,NORTH'
         expect(robot.facing).to eq(ToyRobotSimulator::NORTH)
     end
 
