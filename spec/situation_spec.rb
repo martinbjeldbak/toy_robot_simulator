@@ -4,7 +4,7 @@ require 'tempfile'
 module ToyRobotSimulator
   context 'method tests' do
     describe '.parse_command' do
-      before { Robot.send(:public, *Robot.private_instance_methods) }
+      before { Robot.send(:public, *Robot.protected_instance_methods) }
 
       it 'understands placement' do
         expect(Robot.parse_command('PLACE 2,4,NORTH')).to eq(

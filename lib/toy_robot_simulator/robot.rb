@@ -55,7 +55,7 @@ module ToyRobotSimulator
       end
     end
 
-    private
+    protected
 
     # Is the given location out of bounds?
     def position_out_of_bounds?(x, y, lower_limit = 0, upper_limit = 4)
