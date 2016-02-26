@@ -62,13 +62,21 @@ module ToyRobotSimulator
       (x < lower_limit or y < lower_limit) or (x > upper_limit or y > upper_limit)
     end
 
-    def parse_command(cmd_str)
+    def self.parse_command(cmd_str)
       cmd = cmd_str.downcase.split(' ')
 
       case cmd.first
         when 'place'
           args = cmd[1].split(',')
           { cmd: :place, x: args[0].to_i, y: args[1].to_i, dir: args[2] }
+        when 'move'
+          { cmd: :move}
+        when 'left'
+          { cmd: :left}
+        when 'right'
+          { cmd: :right}
+        when 'report'
+          { cmd: :report}
         else
           raise "Could not parse command '#{cmd_str}'"
       end
