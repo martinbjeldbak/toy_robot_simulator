@@ -8,7 +8,7 @@ module ToyRobotSimulator
     describe 'when running situation 1' do
       let(:situation1_file) { File.dirname(__FILE__) + '/fixtures/situation1.txt' }
 
-      subject(:robot) { Robot.run_from_file(situation1_file) }
+      subject(:robot) { Robot.run_from_file(situation1_file, output_file) }
 
       it 'is in the correct final configuration' do
         expect(subject.location).to eq x: 0, y: 1
@@ -23,10 +23,10 @@ module ToyRobotSimulator
     describe 'when running istuation 4' do
       let(:situation4_file) { File.dirname(__FILE__) + '/fixtures/situation4.txt' }
 
-      subject(:robot) { Robot.run_from_file(situation4_file) }
+      subject(:robot) { Robot.run_from_file(situation4_file, output_file) }
 
       it 'gives the right output' do
-        File.open(ouput_file) do |f|
+        File.open(output_file) do |f|
           expect(f.readline).to eq '2,2,SOUTH'
         end
       end
