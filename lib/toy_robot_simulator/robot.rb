@@ -2,11 +2,8 @@ module ToyRobotSimulator
   class Robot
     attr_reader :loc, :facing, :report_history
 
-    def initialize(x = 0, y = 0, facing = (Direction::NORTH))
-      raise 'x or y coordinate out of bounds' if out_of_bounds? x, y
-
-      @loc = {x: x, y: y}
-      @facing = facing
+    def initialize(x = 0, y = 0, facing = Direction::NORTH)
+      place!(x, y, facing)
       @report_history = []
     end
 
@@ -24,8 +21,11 @@ module ToyRobotSimulator
 
     # Places the robot at the given coordinates and facing
     # the given direction
-    def place!(x, y, facing)
+    def place!(x, y, facing = nil)
+      raise 'x or y coordinate out of bounds' if out_of_bounds? x, y
 
+      @facing = facing if facing
+      @loc = {x: x, y: y}
     end
 
     # Moves the robot in the direction it's facing

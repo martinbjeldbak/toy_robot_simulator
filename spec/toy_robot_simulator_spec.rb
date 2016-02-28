@@ -186,6 +186,27 @@ module ToyRobotSimulator
           end
         end
       end
+
+      describe '.place!' do
+        let(:robot) { Robot.new(2, 3, Direction::NORTH) }
+
+        context 'placing it on the board' do
+          it 'is still facing north' do
+            expect { robot.place!(4, 4) }.to_not change { robot.facing }
+          end
+
+          it 'has move to position 4, 4' do
+            expect { robot.place!(4, 4) }.to change { robot.loc }.to(x: 4, y: 4)
+          end
+        end
+
+        context 'placing it off the board' do
+          it 'is expected to throw an error' do
+            expect { robot.place!(5, 4) }.to raise_error RuntimeError
+            expect { robot.place!(0, -1) }.to raise_error RuntimeError
+          end
+        end
+      end
     end
   end
 end
