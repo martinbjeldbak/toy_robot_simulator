@@ -199,7 +199,7 @@ module ToyRobotSimulator
       end
 
       describe '.place!' do
-        let(:robot) { Robot.new(2, 3, Direction::NORTH) }
+        let(:robot) { FactoryGirl.build(:robot) }
 
         context 'placing it on the board' do
           it 'is still facing north' do
