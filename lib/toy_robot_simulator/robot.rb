@@ -103,6 +103,10 @@ module ToyRobotSimulator
                   robot.right!
                 when :report
                   robot.report
+                when :place
+                  robot.place!(cmd[:opts][:x],
+                               cmd[:opts][:y],
+                               cmd[:opts][:dir])
                 # TODO: Need placement cmd, refactor with opts
                 else
                   raise "I don't know how to run command '#{cmd}'"
