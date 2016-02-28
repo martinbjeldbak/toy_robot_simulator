@@ -19,7 +19,7 @@ module ToyRobotSimulator
       end
 
       it 'correctly writes to an output file' do
-        robot.reports_to_file(output_file)
+        robot.report_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '0,1,NORTH'
@@ -32,7 +32,7 @@ module ToyRobotSimulator
       subject(:robot) { Robot.run_from_file(situation2_file) }
 
       it 'correctly writes to an output file' do
-        robot.reports_to_file(output_file)
+        robot.report_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '0,0,WEST'
@@ -45,7 +45,7 @@ module ToyRobotSimulator
       subject(:robot) { Robot.run_from_file(situation3_file) }
 
       it 'correctly writes to an output file' do
-        robot.reports_to_file(output_file)
+        robot.report_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '3,3,NORTH'
@@ -58,7 +58,7 @@ module ToyRobotSimulator
       subject(:robot) { Robot.run_from_file(situation4_file) }
 
       it 'correctly writes to an output file' do
-        robot.reports_to_file(output_file)
+        robot.report_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '2,2,SOUTH'
@@ -71,7 +71,7 @@ module ToyRobotSimulator
       subject(:robot) { Robot.run_from_file(situation5_file) }
 
       it 'correctly writes to an output file' do
-        robot.reports_to_file(output_file)
+        robot.report_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '4,4,NORTH'
@@ -84,7 +84,7 @@ module ToyRobotSimulator
       subject(:robot) { Robot.run_from_file(situation6_file) }
 
       it 'correctly writes to an output file' do
-        robot.reports_to_file(output_file)
+        robot.report_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '0,0,SOUTH'
