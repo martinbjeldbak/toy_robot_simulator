@@ -3,7 +3,6 @@ module ToyRobotSimulator
     attr_reader :loc, :facing, :report_history
 
     def initialize(x = 0, y = 0, facing = Direction::NORTH)
-      @loc = {}
       place!(x, y, facing)
       @report_history = []
     end

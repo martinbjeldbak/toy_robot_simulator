@@ -47,7 +47,7 @@ module ToyRobotSimulator
           it 'has multiple entries in the report history' do
             robot.report
             robot.report
-            expect(robot.report_history).to have(3).item
+            expect(robot.report_history.length).to eq 2
           end
         end
 
@@ -199,7 +199,7 @@ module ToyRobotSimulator
       end
 
       describe '.place!' do
-        let(:robot) { FactoryGirl.build(:robot) }
+        let(:robot) { Robot.new(2, 3, Direction::NORTH) }
 
         context 'placing it on the board' do
           it 'is still facing north' do
