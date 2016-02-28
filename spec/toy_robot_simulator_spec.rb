@@ -37,9 +37,20 @@ module ToyRobotSimulator
       describe '.report' do
         let(:robot) { Robot.new(4, 4, Direction::SOUTH) }
 
-        subject { robot.report }
+        describe 'when only one report statement has been issued' do
+          subject { robot.report }
 
-        it { is_expected.to eq '4,4,SOUTH' }
+          it { is_expected.to eq '4,4,SOUTH' }
+        end
+
+        describe 'when multiple reports have been issued' do
+          it 'has multiple entries in the report history' do
+            robot.report
+            robot.report
+            expect(robot.report_history).to have(3).item
+          end
+        end
+
       end
 
       describe '.parse_command' do
