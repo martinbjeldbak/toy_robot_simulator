@@ -1,17 +1,25 @@
 module ToyRobotSimulator
   class Robot
-    attr_reader :loc, :facing
+    attr_reader :loc, :facing, :report_history
 
     def initialize(x = 0, y = 0, facing = (Direction::NORTH))
       raise 'x or y coordinate out of bounds' if out_of_bounds? x, y
 
       @loc = {x: x, y: y}
       @facing = facing
+      @report_history = []
     end
 
-    # Formats a string used for reporting location of bot
+    # Formats a string used for reporting location of bot and
+    # adds it to history
     def report
-      "#{@loc[:x]},#{@loc[:y]},#{@facing.upcase}"
+      report_str = "#{@loc[:x]},#{@loc[:y]},#{@facing.upcase}"
+      @report_history << report_str
+      report_str
+    end
+
+    def latest_report
+      @report_history.last
     end
 
     # Places the robot at the given coordinates and facing
@@ -68,36 +76,46 @@ module ToyRobotSimulator
       end
     end
 
-    def on_table?
-
+    # Saves the robot's output to file
+    def output_to_file(outfile)
+      @report_history.each do |report|
+        File.write outfile, report
+      end
     end
 
     # Creates and runs a robot from a file input
     def self.run_from_file(path)
-      File.open(path, 'r') do |f|
-        robot = nil
+        File.open(path, 'r') do |f|
+          robot = nil
 
-        f.each_line do |line|
-          cmd = parse_command(line)
+          f.each_line do |line|
+            cmd = parse_command(line)
 
-          if robot
-            case cmd[:cmd]
-              when :move
-                robot.move!
+            if robot
+              case cmd[:cmd]
+                when :move
+                  robot.move!
+                when :left
+                  robot.left!
+                when :right
+                  robot.right!
+                when :report
+                  robot.report
+                # TODO: Need placement cmd, refactor with opts
+                else
+                  raise "I don't know how to run command '#{cmd}'"
+              end
+
+            else
+              # Robot doesn't exist yet. Ignore
+              # all commands until a place comes in
+              if cmd[:cmd] == :place
+                robot = new cmd[:x], cmd[:y],
+                            Direction.str_to_direction(cmd[:dir])
+              end
             end
-
-          else
-            # Robot doesn't exist yet. Ignore
-            # all commands until a place comes in
-            if cmd[:cmd] == :place
-              robot = new cmd[:x], cmd[:y],
-                          Direction.str_to_direction(cmd[:dir])
-            end
-
           end
-        end
-
-        robot
+          robot
       end
     end
 

@@ -16,7 +16,15 @@ module ToyRobotSimulator
       end
 
       it 'gives the right output' do
-        expect(subject.report).to eq '0,1,NORTH'
+        expect(subject.latest_report).to eq '0,1,NORTH'
+      end
+
+      it 'writes to an output file' do
+        robot.output_to_file(output_file)
+
+        File.open(output_file) do |f|
+          expect(f.readline).to eq '0,1,NORTH'
+        end
       end
     end
 
