@@ -76,8 +76,8 @@ module ToyRobotSimulator
       end
     end
 
-    # Saves the robot's output to file
-    def output_reports_to_file(outfile)
+    # Saves the robot's report history to file
+    def reports_to_file(outfile)
       File.open(outfile, 'w') do |f|
         @report_history.each do |report|
           f.write report

@@ -20,7 +20,7 @@ module ToyRobotSimulator
       end
 
       it 'writes to an output file' do
-        robot.output_reports_to_file(output_file)
+        robot.reports_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '0,1,NORTH'
@@ -34,7 +34,7 @@ module ToyRobotSimulator
       subject(:robot) { Robot.run_from_file(situation4_file) }
 
       it 'gives the right output' do
-        robot.output_reports_to_file(output_file)
+        robot.reports_to_file(output_file)
 
         File.open(output_file) do |f|
           expect(f.readline).to eq '2,2,SOUTH'
