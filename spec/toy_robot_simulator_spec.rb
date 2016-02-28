@@ -34,7 +34,7 @@ module ToyRobotSimulator
     end
 
     context 'method tests' do
-      describe '.report_s' do
+      describe '.report' do
         let(:robot) { Robot.new(4, 4, Direction::SOUTH) }
 
         subject { robot.report }
@@ -149,6 +149,40 @@ module ToyRobotSimulator
 
           it 'rotates the robot south' do
             expect { robot.left! }.to change { robot.facing }.from(Direction::WEST).to(Direction::SOUTH)
+          end
+        end
+      end
+
+      describe '.right!' do
+        context 'facing north' do
+          let(:robot) { Robot.new(2, 3, Direction::NORTH) }
+
+          it 'rotates the robot east' do
+            expect { robot.right! }.to change { robot.facing }.from(Direction::NORTH).to(Direction::EAST)
+          end
+        end
+
+        context 'facing east' do
+          let(:robot) { Robot.new(2, 3, Direction::EAST) }
+
+          it 'rotates the robot south' do
+            expect { robot.right! }.to change { robot.facing }.from(Direction::EAST).to(Direction::SOUTH)
+          end
+        end
+
+        context 'facing south' do
+          let(:robot) { Robot.new(2, 3, Direction::SOUTH) }
+
+          it 'rotates the robot west' do
+            expect { robot.right! }.to change { robot.facing }.from(Direction::SOUTH).to(Direction::WEST)
+          end
+        end
+
+        context 'facing west'  do
+          let(:robot) { Robot.new(2, 3, Direction::WEST) }
+
+          it 'rotates the robot north' do
+            expect { robot.right! }.to change { robot.facing }.from(Direction::WEST).to(Direction::NORTH)
           end
         end
       end

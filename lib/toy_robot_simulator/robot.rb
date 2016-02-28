@@ -54,7 +54,18 @@ module ToyRobotSimulator
 
     # Rotates the robot 90 deg right
     def right!
-
+      case @facing
+        when Direction::NORTH
+          @facing = Direction::EAST
+        when Direction::EAST
+          @facing = Direction::SOUTH
+        when Direction::SOUTH
+          @facing = Direction::WEST
+        when Direction::WEST
+          @facing = Direction::NORTH
+        else
+          raise %q{Cannot rotate right}
+      end
     end
 
     def on_table?

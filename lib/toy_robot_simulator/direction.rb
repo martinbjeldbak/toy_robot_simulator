@@ -1,5 +1,9 @@
 module ToyRobotSimulator
   module Direction
+    # Naieve implementation. Could implement
+    # private method to take +/- 1 and refactor
+    # this enum to use integers.
+
     DIRECTIONS = [
         NORTH = 'North',
         EAST = 'East',
