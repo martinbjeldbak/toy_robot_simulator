@@ -2,7 +2,7 @@ module ToyRobotSimulator
   class Robot
     attr_reader :loc, :facing
 
-    def initialize(x: 0, y: 0, facing: (Direction::NORTH))
+    def initialize(x = 0, y = 0, facing = (Direction::NORTH))
       raise 'x or y coordinate out of bounds' if out_of_bounds? x, y
 
       @loc = {x: x, y: y}
@@ -62,15 +62,14 @@ module ToyRobotSimulator
             case cmd[:cmd]
               when :move
                 robot.move!
-
             end
 
           else
             # Robot doesn't exist yet. Ignore
             # all commands until a place comes in
             if cmd[:cmd] == :place
-              robot = new x: cmd[:x], y: cmd[:y],
-                          facing: Direction.str_to_direction(cmd[:dir])
+              robot = new cmd[:x], cmd[:y],
+                          Direction.str_to_direction(cmd[:dir])
             end
 
           end
