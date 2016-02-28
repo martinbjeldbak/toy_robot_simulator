@@ -15,6 +15,7 @@ module ToyRobotSimulator
       report_str
     end
 
+    # Gets the latest report (location and face of robot)
     def latest_report
       @report_history.last
     end
@@ -46,6 +47,7 @@ module ToyRobotSimulator
 
     # Rotates the robot 90 deg left
     def left!
+      # TODO: Refactor. Can be less explicit
       case @facing
         when Direction::NORTH
           @facing = Direction::WEST
@@ -62,6 +64,7 @@ module ToyRobotSimulator
 
     # Rotates the robot 90 deg right
     def right!
+      # TODO: Refactor. Can be less explicit
       case @facing
         when Direction::NORTH
           @facing = Direction::EAST
@@ -85,7 +88,7 @@ module ToyRobotSimulator
       end
     end
 
-    # Creates and runs a robot from a file input
+    # Creates and runs a robot from file input
     def self.run_from_file(path)
         File.open(path, 'r') do |f|
           robot = nil
@@ -107,7 +110,6 @@ module ToyRobotSimulator
                   robot.place!(cmd[:opts][:x],
                                cmd[:opts][:y],
                                cmd[:opts][:dir])
-                # TODO: Need placement cmd, refactor with opts
                 else
                   raise "I don't know how to run command '#{cmd}'"
               end
@@ -132,6 +134,8 @@ module ToyRobotSimulator
       (x < lower_limit or y < lower_limit) or (x > upper_limit or y > upper_limit)
     end
 
+    # Parse a string command and return a hash
+    # containing the command and possible options
     def self.parse_command(cmd_str)
       cmd = cmd_str.downcase.split(' ')
 
