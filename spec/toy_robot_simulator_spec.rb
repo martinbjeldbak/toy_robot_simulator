@@ -9,15 +9,15 @@ module ToyRobotSimulator
     context 'when placing robot in valid configurations' do
       it 'it creates new instances' do
         robot = Robot.new(0, 0, Direction::NORTH)
-        expect(robot.location).to eq x: 0, y: 0
+        expect(robot.loc).to eq x: 0, y: 0
         expect(robot.facing).to eq(Direction::NORTH)
 
         robot = Robot.new(1, 0, Direction::EAST)
-        expect(robot.location).to eq x: 1, y: 0
+        expect(robot.loc).to eq x: 1, y: 0
         expect(robot.facing).to eq(Direction::EAST)
 
         robot = Robot.new(3, 2, Direction::NORTH)
-        expect(robot.location).to eq x: 3, y: 2
+        expect(robot.loc).to eq x: 3, y: 2
         expect(robot.facing).to eq(Direction::NORTH)
       end
 
@@ -69,6 +69,55 @@ module ToyRobotSimulator
         end
       end
 
+      describe '.move!' do
+        context 'movable actions' do
+          it 'moving north' do
+            robot = Robot.new(x: 0, y: 0, facing: Direction::NORTH)
+            expect { robot.move! }.to change { robot.loc[:y] }.from(0).to(1)
+            expect { robot.move! }.to_not change { robot.loc[:x] }
+          end
+
+          it 'moves east' do
+            robot = Robot.new(x: 2, y: 4, facing: Direction::EAST)
+            expect { robot.move! }.to change { robot.loc[:x] }.from(2).to(1)
+            expect { robot.move! }.to_not change { robot.loc[:y] }
+          end
+
+          it 'moves south' do
+            robot = Robot.new(x: 2, y: 4, facing: Direction::SOUTH)
+            expect { robot.move! }.to change { robot.loc[:y] }.from(4).to(3)
+            expect { robot.move! }.to_not change { robot.loc[:x] }
+          end
+
+          it 'moves west' do
+            robot = Robot.new(x: 2, y: 4, facing: Direction::WEST)
+            expect { robot.move! }.to change { robot.loc[:x] }.from(2).to(3)
+            expect { robot.move! }.to_not change { robot.loc[:y] }
+          end
+        end
+
+        context 'immovable actions' do
+          it "doesn't move north" do
+            robot = Robot.new(x: 0, y: 4, facing: Direction::NORTH)
+            expect { robot.move! }.to_not change { robot.loc[:y] }
+          end
+
+          it "doesn't move east" do
+            robot = Robot.new(x: 0, y: 0, facing: Direction::EAST)
+            expect { robot.move! }.to_not change { robot.loc[:x] }
+          end
+
+          it "doesn't move south" do
+            robot = Robot.new(x: 0, y: 0, facing: Direction::SOUTH)
+            expect { robot.move! }.to_not change { robot.loc[:y] }
+          end
+
+          it "doesn't move west" do
+            robot = Robot.new(x: 4, y: 0, facing: Direction::WEST)
+            expect { robot.move! }.to_not change { robot.loc[:x] }
+          end
+        end
+      end
     end
   end
 end

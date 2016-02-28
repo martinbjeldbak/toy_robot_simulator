@@ -11,7 +11,7 @@ module ToyRobotSimulator
       subject(:robot) { Robot.run_from_file(situation1_file) }
 
       it 'is in the correct final configuration' do
-        expect(subject.location).to eq x: 0, y: 1
+        expect(subject.loc).to eq x: 0, y: 1
         expect(subject.facing).to eq Direction::NORTH
       end
 
