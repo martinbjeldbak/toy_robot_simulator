@@ -99,6 +99,7 @@ module ToyRobotSimulator
     end
 
     # Creates and runs a robot from file input
+    # @return [Robot]
     def self.run_from_file(path)
         File.open(path, 'r') do |f|
           robot = nil
