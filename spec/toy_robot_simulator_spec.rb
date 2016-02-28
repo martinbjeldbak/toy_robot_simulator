@@ -118,6 +118,40 @@ module ToyRobotSimulator
           end
         end
       end
+
+      describe '.left!' do
+        context 'facing north' do
+          let(:robot) { Robot.new(2, 3, Direction::NORTH) }
+
+          it 'rotates the robot west' do
+            expect { robot.left! }.to change { robot.facing }.from(Direction::NORTH).to(Direction::WEST)
+          end
+        end
+
+        context 'facing east' do
+          let(:robot) { Robot.new(2, 3, Direction::EAST) }
+
+          it 'rotates the robot north' do
+            expect { robot.left! }.to change { robot.facing }.from(Direction::EAST).to(Direction::NORTH)
+          end
+        end
+
+        context 'facing south' do
+          let(:robot) { Robot.new(2, 3, Direction::SOUTH) }
+
+          it 'rotates the robot east' do
+            expect { robot.left! }.to change { robot.facing }.from(Direction::SOUTH).to(Direction::EAST)
+          end
+        end
+
+        context 'facing west'  do
+          let(:robot) { Robot.new(2, 3, Direction::WEST) }
+
+          it 'rotates the robot south' do
+            expect { robot.left! }.to change { robot.facing }.from(Direction::WEST).to(Direction::SOUTH)
+          end
+        end
+      end
     end
   end
 end
