@@ -78,5 +78,18 @@ module ToyRobotSimulator
         end
       end
     end
+
+    context 'situation 6' do
+      let(:situation6_file) { File.dirname(__FILE__) + '/fixtures/situation6.txt' }
+      subject(:robot) { Robot.run_from_file(situation6_file) }
+
+      it 'correctly writes to an output file' do
+        robot.reports_to_file(output_file)
+
+        File.open(output_file) do |f|
+          expect(f.readline).to eq '0,0,SOUTH'
+        end
+      end
+    end
   end
 end

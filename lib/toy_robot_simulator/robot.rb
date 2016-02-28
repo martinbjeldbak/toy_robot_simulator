@@ -30,6 +30,8 @@ module ToyRobotSimulator
     end
 
     # Moves the robot in the direction it's facing
+    # Currently ignores any direction that would
+    # put the robot out of bounds
     def move!
       case @facing
         when Direction::NORTH
