@@ -112,8 +112,8 @@ module ToyRobotSimulator
               # Robot doesn't exist yet. Ignore
               # all commands until a place comes in
               if cmd[:cmd] == :place
-                robot = new cmd[:x], cmd[:y],
-                            Direction.str_to_direction(cmd[:dir])
+                robot = new cmd[:opts][:x], cmd[:opts][:y],
+                            Direction.str_to_direction(cmd[:opts][:dir])
               end
             end
           end
@@ -134,7 +134,7 @@ module ToyRobotSimulator
       case cmd.first
         when 'place'
           args = cmd[1].split(',')
-          { cmd: :place, x: args[0].to_i, y: args[1].to_i, dir: args[2] }
+          { cmd: :place, opts: { x: args[0].to_i, y: args[1].to_i, dir: args[2] } }
         when 'move'
           { cmd: :move}
         when 'left'

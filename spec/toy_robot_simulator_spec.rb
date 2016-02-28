@@ -58,9 +58,9 @@ module ToyRobotSimulator
 
         it 'understands placement' do
           expect(Robot.parse_command('PLACE 2,4,NORTH')).to eq(
-                                                                cmd: :place, x: 2, y: 4, dir: 'north')
+                                                                cmd: :place, opts: {x: 2, y: 4, dir: 'north'})
           expect(Robot.parse_command('PLACE 0,0,EAST')).to eq(
-                                                               cmd: :place, x: 0, y: 0, dir: 'east')
+                                                               cmd: :place, opts: {x: 0, y: 0, dir: 'east'})
         end
 
         it 'understands move' do
