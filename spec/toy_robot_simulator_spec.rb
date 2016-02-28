@@ -90,19 +90,19 @@ module ToyRobotSimulator
 
           it 'moves east' do
             robot = Robot.new(2, 4, Direction::EAST)
-            expect { robot.move! }.to change { robot.loc[:x] }.from(2).to(1)
+            expect { robot.move! }.to change { robot.loc[:x] }.from(2).to(3)
             expect { robot.move! }.to_not change { robot.loc[:y] }
           end
 
           it 'moves south' do
-            robot = Robot.new(2, 4, Direction::SOUTH)
-            expect { robot.move! }.to change { robot.loc[:y] }.from(4).to(3)
+            robot = Robot.new(0, 1, Direction::SOUTH)
+            expect { robot.move! }.to change { robot.loc[:y] }.from(1).to(0)
             expect { robot.move! }.to_not change { robot.loc[:x] }
           end
 
           it 'moves west' do
-            robot = Robot.new(2, 4, Direction::WEST)
-            expect { robot.move! }.to change { robot.loc[:x] }.from(2).to(3)
+            robot = Robot.new(4, 0, Direction::WEST)
+            expect { robot.move! }.to change { robot.loc[:x] }.from(4).to(3)
             expect { robot.move! }.to_not change { robot.loc[:y] }
           end
         end
@@ -114,7 +114,7 @@ module ToyRobotSimulator
           end
 
           it "doesn't move east" do
-            robot = Robot.new(0, 0, Direction::EAST)
+            robot = Robot.new(4, 0, Direction::EAST)
             expect { robot.move! }.to_not change { robot.loc[:x] }
           end
 
@@ -124,7 +124,7 @@ module ToyRobotSimulator
           end
 
           it "doesn't move west" do
-            robot = Robot.new(4, 0, Direction::WEST)
+            robot = Robot.new(0, 0, Direction::WEST)
             expect { robot.move! }.to_not change { robot.loc[:x] }
           end
         end

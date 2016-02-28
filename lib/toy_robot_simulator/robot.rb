@@ -34,11 +34,11 @@ module ToyRobotSimulator
         when Direction::NORTH
           @loc[:y] += 1 unless out_of_bounds? @loc[:x], @loc[:y] + 1
         when Direction::EAST
-          @loc[:x] -= 1 unless out_of_bounds? @loc[:x] - 1, @loc[:y]
+          @loc[:x] += 1 unless out_of_bounds? @loc[:x] + 1, @loc[:y]
         when Direction::SOUTH
           @loc[:y] -= 1 unless out_of_bounds? @loc[:x], @loc[:y] - 1
         when Direction::WEST
-          @loc[:x] += 1 unless out_of_bounds? @loc[:x] + 1, @loc[:y]
+          @loc[:x] -= 1 unless out_of_bounds? @loc[:x] - 1, @loc[:y]
         else
           raise %q{Don't know which direction to move}
       end
