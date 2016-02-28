@@ -90,7 +90,13 @@ module ToyRobotSimulator
       end
     end
 
-
+    # Writes each requested support command
+    # to standard out
+    def report_to_stdout
+      @report_history.each do |report|
+        puts(report)
+      end
+    end
 
     # Creates and runs a robot from file input
     def self.run_from_file(path)
