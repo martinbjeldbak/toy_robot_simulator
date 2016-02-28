@@ -5,7 +5,7 @@ module ToyRobotSimulator
   describe 'Obeying situations' do
     let(:output_file) { Tempfile.new('test_output.txt').path }
 
-    describe 'when running situation 1' do
+    context 'situation 1' do
       let(:situation1_file) { File.dirname(__FILE__) + '/fixtures/situation1.txt' }
 
       subject(:robot) { Robot.run_from_file(situation1_file) }
@@ -28,7 +28,7 @@ module ToyRobotSimulator
       end
     end
 
-    describe 'when running situation 4' do
+    context 'situation 4' do
       let(:situation4_file) { File.dirname(__FILE__) + '/fixtures/situation4.txt' }
 
       subject(:robot) { Robot.run_from_file(situation4_file) }
