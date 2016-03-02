@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'toy_robot_simulator'
+
+
+ToyRobotSimulator::Simulator.run_from_file_report_stdout ARGV[0]
+
+# Could add command line options parsing using optparse package to allow
+# output to file instead of just printing to stdout...
