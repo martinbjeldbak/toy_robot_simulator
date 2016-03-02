@@ -1,8 +1,10 @@
-# ToyRobotSimulator
+# ToyRobotSimulator [![Travis Build Status](https://travis-ci.org/martinbjeldbak/toy_robot_simulator.svg?branch=master)](https://travis-ci.org/martinbjeldbak/toy_robot_simulator)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/toy_robot_simulator`. To experiment with that code, run `bin/console` for an interactive prompt.
+This library allows simulation of a Robot moving around a 5x5 square board, where (0,0) is the origin at the South-Eastern most corner of the board.
 
-TODO: Delete this and the text above, and describe your gem
+Technical requirements of the robot can be seen in the document titled "Code Test - Robot.pdf" in this repository.
+
+This project is part of [lookahead.com.au](http://www.lookahead.com.au/)'s recruitment process.
 
 ## Installation
 
@@ -22,7 +24,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'toy_robot_simulator'
+
+ToyRobotSimulator::Simulator.run_from_file_report_stdout('~/situation1.txt')
+-> 0,1,NORTH
+```
 
 ## Development
 
