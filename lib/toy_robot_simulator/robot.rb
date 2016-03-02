@@ -101,40 +101,40 @@ module ToyRobotSimulator
     # Creates and runs a robot from file input
     # @return [Robot]
     def self.run_from_file(path)
-        File.open(path, 'r') do |f|
-          robot = nil
+      File.open(path, 'r') do |f|
+        robot = nil
 
-          f.each_line do |line|
-            cmd = parse_command(line)
+        f.each_line do |line|
+          cmd = parse_command(line)
 
-            if robot
-              case cmd[:cmd]
-                when :move
-                  robot.move!
-                when :left
-                  robot.left!
-                when :right
-                  robot.right!
-                when :report
-                  robot.report
-                when :place
-                  robot.place!(cmd[:opts][:x],
-                               cmd[:opts][:y],
-                               cmd[:opts][:dir])
-                else
-                  raise "I don't know how to run command '#{cmd}'"
-              end
+          if robot
+            case cmd[:cmd]
+              when :move
+                robot.move!
+              when :left
+                robot.left!
+              when :right
+                robot.right!
+              when :report
+                robot.report
+              when :place
+                robot.place!(cmd[:opts][:x],
+                             cmd[:opts][:y],
+                             cmd[:opts][:dir])
+              else
+                raise "I don't know how to run command '#{cmd}'"
+            end
 
-            else
-              # Robot doesn't exist yet. Ignore
-              # all commands until a place comes in
-              if cmd[:cmd] == :place
-                robot = new cmd[:opts][:x], cmd[:opts][:y],
-                            Direction.str_to_direction(cmd[:opts][:dir])
-              end
+          else
+            # Robot doesn't exist yet. Ignore
+            # all commands until a place comes in
+            if cmd[:cmd] == :place
+              robot = new cmd[:opts][:x], cmd[:opts][:y],
+                          Direction.str_to_direction(cmd[:opts][:dir])
             end
           end
-          robot
+        end
+        robot
       end
     end
 
@@ -153,15 +153,15 @@ module ToyRobotSimulator
       case cmd.first
         when 'place'
           args = cmd[1].split(',')
-          { cmd: :place, opts: { x: args[0].to_i, y: args[1].to_i, dir: args[2] } }
+          {cmd: :place, opts: {x: args[0].to_i, y: args[1].to_i, dir: args[2]}}
         when 'move'
-          { cmd: :move}
+          {cmd: :move}
         when 'left'
-          { cmd: :left}
+          {cmd: :left}
         when 'right'
-          { cmd: :right}
+          {cmd: :right}
         when 'report'
-          { cmd: :report}
+          {cmd: :report}
         else
           raise "Could not parse command '#{cmd_str}'"
       end
