@@ -1,10 +1,16 @@
 # ToyRobotSimulator [![Travis Build Status](https://travis-ci.org/martinbjeldbak/toy_robot_simulator.svg?branch=master)](https://travis-ci.org/martinbjeldbak/toy_robot_simulator)
 
-This library allows simulation of a Robot moving around a 5x5 square board, where (0,0) is the origin at the South-Eastern most corner of the board.
+This library allows simulation of a Robot moving around a 5x5 square board, where (0,0) is the origin at the South-western corner. A very simple CLI which takes advantage of this API has also been implemented. Usage of both the API and the CLI can be seen in the [Usage](https://github.com/martinbjeldbak/toy_robot_simulator#usage) section below.
 
-Technical requirements of the robot can be seen in the document titled "Code Test - Robot.pdf" in this repository.
+Technical requirements of the robot can be seen in the document titled "Code Test - Robot.pdf" in this repository. This project is part of [lookahead.com.au](http://www.lookahead.com.au/)'s recruitment process.
 
-This project is part of [lookahead.com.au](http://www.lookahead.com.au/)'s recruitment process.
+## Environments
+This gem should be compatible with any Ruby version above ruby2.0.
+
+This application was developed on OS X 10.11.3 (El Capitan) and Windows 10, both using Ruby 2.2.
+
+- [Travis.ci](https://travis-ci.org/martinbjeldbak/toy_robot_simulator) supplies the build system, and uses Ubuntu 12.04.5 LTS running Ruby 2.3.
+
 
 ## Installation
 
