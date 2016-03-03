@@ -1,4 +1,4 @@
-# ToyRobotSimulator [![Travis Build Status](https://travis-ci.org/martinbjeldbak/toy_robot_simulator.svg?branch=master)](https://travis-ci.org/martinbjeldbak/toy_robot_simulator)
+# Toy Robot Simulator [![Travis Build Status](https://travis-ci.org/martinbjeldbak/toy_robot_simulator.svg?branch=master)](https://travis-ci.org/martinbjeldbak/toy_robot_simulator)
 
 This library allows simulation of a Robot moving around a 5x5 square board, where (0,0) is the origin at the South-western corner. A very simple CLI which takes advantage of this API has also been implemented. Usage of both the API and the CLI can be seen in the [Usage](https://github.com/martinbjeldbak/toy_robot_simulator#usage) section below.
 
@@ -9,7 +9,7 @@ This gem should be compatible with any Ruby version above ruby2.0.
 
 This application was developed on OS X 10.11.3 (El Capitan) and Windows 10, both using Ruby 2.2.
 
-- [Travis.ci](https://travis-ci.org/martinbjeldbak/toy_robot_simulator) supplies the build system, and uses Ubuntu 12.04.5 LTS running Ruby 2.3.
+- I use [Travis.ci](https://travis-ci.org/martinbjeldbak/toy_robot_simulator) to run the specs, which uses Ubuntu 12.04.5 LTS running Ruby 2.3 on a Docker image.
 
 
 ## Installation
@@ -64,13 +64,12 @@ robot.report # => '2,1,NORTH'
 ```
 
 ## Commands
-
-The following 5 commands can be used in the text file given to the robot. They use the underlying library API also accessible from importing the simulator into your own program.
+The following 5 commands can be used to control the robot around the board: move, left, right, place, and report. Their usage in relation to file input to the CLI are described in this section. These commands use the underlying library API.
 
 ### PLACE
 Places the robot at the desired location on the 5x5 board. This command takes 3 parameters, ``x``, ``y``, and ``f``. Where ``x`` and ``y`` are limited to the range ``[0, 4]``. ``f`` defines the direction. Placing the robot at an invalid location (i.e. ``(-1, -1)``) will be ignored.
 
-Placement can happen at any point in the command log.
+Placement can happen at any point in a series of commands.
 
 #### Example
 ```
@@ -109,6 +108,7 @@ RIGHT
 
 ### REPORT
 Reports the current ``x``, ``y``, and ``f`` position.
+
 #### Example
 The below commands output ``3,2,EAST``.
 ```
